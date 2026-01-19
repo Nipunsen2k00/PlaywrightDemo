@@ -1,0 +1,436 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e7]:
+        - button "Kalm Logo Kalm.lk" [ref=e8] [cursor=pointer]:
+          - img "Kalm Logo" [ref=e9]
+          - generic [ref=e10]: Kalm.lk
+        - navigation [ref=e11]:
+          - generic [ref=e12]:
+            - link "About" [ref=e13] [cursor=pointer]:
+              - /url: "#about"
+            - link "Services" [ref=e14] [cursor=pointer]:
+              - /url: "#services"
+            - link "How It Works" [ref=e15] [cursor=pointer]:
+              - /url: "#how-it-works"
+            - link "Therapists" [ref=e16] [cursor=pointer]:
+              - /url: "#therapists"
+            - link "FAQ" [ref=e17] [cursor=pointer]:
+              - /url: "#faq"
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - img [ref=e20]
+            - generic [ref=e22]: +94 (76) 633 0360
+          - button "Login" [ref=e23] [cursor=pointer]
+    - generic [ref=e25]:
+      - heading "For the thoughts you've never told anyone" [level=1] [ref=e27]:
+        - text: For the thoughts
+        - text: you've
+        - generic [ref=e28]: never
+        - text: told anyone
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - heading "Choose How You Want to Join" [level=2] [ref=e31]
+          - paragraph [ref=e32]: You can upgrade from anonymous to regular account anytime
+          - generic [ref=e33]:
+            - generic [ref=e34]:
+              - heading "Regular Account" [level=3] [ref=e35]
+              - paragraph [ref=e36]: Full features
+              - generic [ref=e37]:
+                - generic [ref=e38]:
+                  - img [ref=e39]
+                  - generic [ref=e41]: Email & secure account
+                - generic [ref=e42]:
+                  - img [ref=e43]
+                  - generic [ref=e45]: Saved & accessible
+                - generic [ref=e46]:
+                  - img [ref=e47]
+                  - generic [ref=e49]: Email updates & alerts
+                - generic [ref=e50]:
+                  - img [ref=e51]
+                  - generic [ref=e53]: Private & secure
+              - button "Sign Up" [ref=e54] [cursor=pointer]
+            - generic [ref=e55]:
+              - heading "Anonymous Account" [level=3] [ref=e56]
+              - paragraph [ref=e57]: Privacy-first
+              - generic [ref=e58]:
+                - generic [ref=e59]:
+                  - img [ref=e60]
+                  - generic [ref=e62]: No personal info needed
+                - generic [ref=e63]:
+                  - img [ref=e64]
+                  - generic [ref=e67]: Session-based only
+                - generic [ref=e68]:
+                  - img [ref=e69]
+                  - generic [ref=e72]: No follow-ups
+                - generic [ref=e73]:
+                  - img [ref=e74]
+                  - generic [ref=e76]: Fully anonymous
+              - button "Join Anonymously" [ref=e77] [cursor=pointer]
+        - img "Mental wellness" [ref=e79]
+        - generic [ref=e80]:
+          - paragraph [ref=e81]:
+            - text: Connect with licensed therapists
+            - text: in Sri Lanka through our secure,
+            - text: private platform. Your mental
+            - text: wellness journey starts here.
+          - generic [ref=e82]:
+            - generic [ref=e83]:
+              - generic [ref=e84]: 500+
+              - generic [ref=e85]: Happy Clients
+            - generic [ref=e86]:
+              - generic [ref=e87]: 50+
+              - generic [ref=e88]: Therapists
+    - generic [ref=e89]:
+      - generic [ref=e92]:
+        - heading "About Us" [level=2] [ref=e94]
+        - paragraph [ref=e96]: We're on a mission to make mental health support accessible, affordable, and stigma-free for everyone in Sri Lanka. Your wellbeing matters, and we're here to help you thrive.
+      - generic [ref=e98]:
+        - generic [ref=e99]:
+          - generic [ref=e100]:
+            - generic [ref=e101]: "1"
+            - generic [ref=e102]:
+              - heading "Compassionate Care" [level=3] [ref=e103]
+              - paragraph [ref=e104]: Our licensed therapists provide empathetic, culturally-sensitive support tailored to the Sri Lankan context and your unique needs.
+          - generic [ref=e105]:
+            - generic [ref=e106]: "2"
+            - generic [ref=e107]:
+              - heading "Complete Privacy" [level=3] [ref=e108]
+              - paragraph [ref=e109]: Your conversations are completely confidential and secure. We use end-to-end encryption to protect your privacy.
+          - generic [ref=e110]:
+            - generic [ref=e111]: "3"
+            - generic [ref=e112]:
+              - heading "Community Focus" [level=3] [ref=e113]
+              - paragraph [ref=e114]: Built specifically for Sri Lankans, understanding our culture, languages, and the unique challenges we face.
+        - generic [ref=e116]:
+          - generic [ref=e117]:
+            - img "Mental wellness consultation"
+          - button "Unmute video" [ref=e118] [cursor=pointer]:
+            - img [ref=e119]
+    - generic [ref=e124]:
+      - generic [ref=e125]:
+        - heading "Why Choose Kalm?" [level=2] [ref=e126]
+        - paragraph [ref=e127]: We've built a platform that puts your comfort, privacy, and convenience first.
+      - generic [ref=e128]:
+        - generic [ref=e129]:
+          - heading "Secure Chat" [level=3] [ref=e130]
+          - paragraph [ref=e131]: End-to-end encrypted messaging with your therapist anytime, anywhere.
+        - generic [ref=e132]:
+          - heading "Video & Audio Calls" [level=3] [ref=e133]
+          - paragraph [ref=e134]: Face-to-face sessions or voice-only calls based on your comfort level.
+        - generic [ref=e135]:
+          - heading "Mobile-First Design" [level=3] [ref=e136]
+          - paragraph [ref=e137]: Optimized for mobile devices with a seamless, intuitive experience.
+        - generic [ref=e138]:
+          - heading "Local Payment Support" [level=3] [ref=e139]
+          - paragraph [ref=e140]: Pay easily with local payment methods including mobile wallets.
+        - generic [ref=e141]:
+          - heading "Flexible Scheduling" [level=3] [ref=e142]
+          - paragraph [ref=e143]: Book sessions that fit your schedule, including evenings and weekends.
+        - generic [ref=e144]:
+          - heading "Licensed Therapists" [level=3] [ref=e145]
+          - paragraph [ref=e146]: All our therapists are licensed professionals with verified credentials.
+    - generic [ref=e148]:
+      - generic [ref=e149]:
+        - heading "How It Works" [level=2] [ref=e150]
+        - paragraph [ref=e151]: Getting started with your mental wellness journey is simple and straightforward.
+      - generic [ref=e152]:
+        - generic [ref=e153]:
+          - img [ref=e156]
+          - generic [ref=e159]:
+            - heading "Get Started" [level=3] [ref=e160]
+            - paragraph [ref=e161]: Create a secure account in minutes, or join without sharing details.
+        - generic [ref=e162]:
+          - img [ref=e165]
+          - generic [ref=e168]:
+            - heading "Choose a Service" [level=3] [ref=e169]
+            - paragraph [ref=e170]: Pick the type of support you need, whether it's teen, individual, or couples therapy.
+        - generic [ref=e171]:
+          - img [ref=e174]
+          - generic [ref=e176]:
+            - heading "Find Your Therapist" [level=3] [ref=e177]
+            - paragraph [ref=e178]: Browse our network of professionals and choose the one who feels right for you.
+        - generic [ref=e179]:
+          - img [ref=e182]
+          - generic [ref=e184]:
+            - heading "Book Your Session" [level=3] [ref=e185]
+            - paragraph [ref=e186]: Select a time that fits your schedule. You'll see the rate upfront, no surprises.
+        - generic [ref=e187]:
+          - img [ref=e190]
+          - generic [ref=e192]:
+            - heading "Start Therapy" [level=3] [ref=e193]
+            - paragraph [ref=e194]: Join your session via video, voice, or text, however you feel most comfortable. It's real support, on your terms.
+    - generic [ref=e196]:
+      - generic [ref=e197]:
+        - heading "Key Services" [level=2] [ref=e198]
+        - paragraph [ref=e199]: We provide specialized support for a wide range of mental health concerns.
+      - generic [ref=e200]:
+        - generic [ref=e201]:
+          - img "Teenager in a thoughtful pose" [ref=e203]
+          - generic [ref=e204]:
+            - heading "Teens" [level=3] [ref=e205]
+            - paragraph [ref=e206]: (13-17)
+            - paragraph [ref=e207]: Specialized support for teenagers navigating adolescence, school stress, and identity.
+            - button "Get Started" [ref=e208] [cursor=pointer]:
+              - generic [ref=e209]: Get Started
+              - img [ref=e210]
+        - generic [ref=e212]:
+          - img "Adult in a calm, reflective setting" [ref=e214]
+          - generic [ref=e215]:
+            - heading "Individuals" [level=3] [ref=e216]
+            - paragraph [ref=e217]: (18+)
+            - paragraph [ref=e218]: Personal therapy for adults dealing with anxiety, depression, and life challenges.
+            - button "Get Started" [ref=e219] [cursor=pointer]:
+              - generic [ref=e220]: Get Started
+              - img [ref=e221]
+        - generic [ref=e223]:
+          - img "Family or couple sharing a warm moment" [ref=e225]
+          - generic [ref=e226]:
+            - heading "Family & Couples" [level=3] [ref=e227]
+            - paragraph [ref=e228]: (FOR US)
+            - paragraph [ref=e229]: Relationship counseling and family therapy to strengthen bonds and communication.
+            - button "Get Started" [ref=e230] [cursor=pointer]:
+              - generic [ref=e231]: Get Started
+              - img [ref=e232]
+        - generic [ref=e234]:
+          - img "Inclusive scene with rainbow elements" [ref=e236]
+          - generic [ref=e237]:
+            - heading "LGBTQIA+" [level=3] [ref=e238]
+            - paragraph [ref=e239]: Affirming and inclusive therapy for LGBTQIA+ individuals and couples.
+            - button "Get Started" [ref=e240] [cursor=pointer]:
+              - generic [ref=e241]: Get Started
+              - img [ref=e242]
+    - generic [ref=e245]:
+      - generic [ref=e246]:
+        - heading "Kalm.lk vs Traditional Therapy" [level=2] [ref=e247]
+        - paragraph [ref=e248]: See how our platform offers advantages over traditional in-person therapy.
+      - generic [ref=e249]:
+        - generic [ref=e250]:
+          - generic [ref=e252]:
+            - img "Kalm" [ref=e253]
+            - generic [ref=e254]: Kalm.lk
+          - generic [ref=e255]: Traditional
+        - generic [ref=e256]:
+          - generic [ref=e257]: Availability
+          - generic [ref=e258]:
+            - img [ref=e259]
+            - generic [ref=e261]: 24/7 online access
+          - generic [ref=e262]:
+            - img [ref=e263]
+            - generic [ref=e266]: Limited office hours
+        - generic [ref=e267]:
+          - generic [ref=e268]: Location
+          - generic [ref=e269]:
+            - img [ref=e270]
+            - generic [ref=e272]: Anywhere with internet
+          - generic [ref=e273]:
+            - img [ref=e274]
+            - generic [ref=e277]: Must travel to office
+        - generic [ref=e278]:
+          - generic [ref=e279]: Privacy
+          - generic [ref=e280]:
+            - img [ref=e281]
+            - generic [ref=e283]: Complete anonymity
+          - generic [ref=e284]:
+            - img [ref=e285]
+            - generic [ref=e288]: Public waiting rooms
+        - generic [ref=e289]:
+          - generic [ref=e290]: Cost
+          - generic [ref=e291]:
+            - img [ref=e292]
+            - generic [ref=e294]: Affordable pricing
+          - generic [ref=e295]:
+            - img [ref=e296]
+            - generic [ref=e299]: Higher consultation fees
+        - generic [ref=e300]:
+          - generic [ref=e301]: Therapist Choice
+          - generic [ref=e302]:
+            - img [ref=e303]
+            - generic [ref=e305]: Wide selection available
+          - generic [ref=e306]:
+            - img [ref=e307]
+            - generic [ref=e310]: Limited local options
+    - generic [ref=e316]:
+      - generic [ref=e317]:
+        - heading "Meet Our Therapists" [level=2] [ref=e319]
+        - paragraph [ref=e320]: Our team of licensed, experienced therapists are here to support your mental wellness journey.
+      - generic [ref=e321]:
+        - generic [ref=e324]:
+          - generic [ref=e325]:
+            - generic [ref=e326]:
+              - generic [ref=e327]:
+                - heading "nirmani senara thirandi" [level=3] [ref=e328]
+                - paragraph [ref=e329]: Licensed Therapist, PhD Clinical Psychology, MSc Counseling Psychology
+                - paragraph [ref=e330]: General Counseling
+              - paragraph [ref=e331]: "Languages: English"
+            - generic [ref=e332]:
+              - img [ref=e334]
+              - img [ref=e338]
+          - button "Book Session" [ref=e340] [cursor=pointer]
+        - generic [ref=e343]:
+          - generic [ref=e344]:
+            - generic [ref=e345]:
+              - generic [ref=e346]:
+                - heading "Saajida Fazlan" [level=3] [ref=e347]
+                - paragraph [ref=e348]: Licensed Therapist
+                - paragraph [ref=e349]: General Counseling
+              - paragraph [ref=e350]: "Languages: English"
+            - img [ref=e353]
+          - button "Book Session" [ref=e356] [cursor=pointer]
+        - generic [ref=e359]:
+          - generic [ref=e360]:
+            - generic [ref=e361]:
+              - generic [ref=e362]:
+                - heading "Afna Nawas" [level=3] [ref=e363]
+                - paragraph [ref=e364]: Licensed Therapist
+                - paragraph [ref=e365]: General Counseling
+              - paragraph [ref=e366]: "Languages: English"
+            - img [ref=e369]
+          - button "Book Session" [ref=e372] [cursor=pointer]
+        - generic [ref=e375]:
+          - generic [ref=e376]:
+            - generic [ref=e377]:
+              - generic [ref=e378]:
+                - heading "Aadhila Mohamed" [level=3] [ref=e379]
+                - paragraph [ref=e380]: Postgraduate Diploma in Counseling and Psychosocial Support, Certified Counselor, CBT Certified, Bachelor's Degree in Psychology
+                - paragraph [ref=e381]: General Counseling
+              - paragraph [ref=e382]: "Languages: English"
+            - generic [ref=e383]:
+              - img [ref=e385]
+              - img [ref=e389]
+              - img [ref=e392]
+          - button "Book Session" [ref=e394] [cursor=pointer]
+      - button "View All Therapists" [ref=e396] [cursor=pointer]:
+        - generic [ref=e397]: View All Therapists
+        - img [ref=e398]
+    - generic [ref=e401]:
+      - generic [ref=e402]:
+        - heading "What Our Clients Say" [level=2] [ref=e403]
+        - paragraph [ref=e404]: Real stories from people who found support and healing through Kalm.
+      - generic [ref=e405]:
+        - heading "\"Kalm.lk changed my life\"" [level=3] [ref=e406]
+        - paragraph [ref=e407]: The Kalm team provided exceptional care, making me feel truly supported. Their expertise and empathy transformed my therapy experience. I highly recommend Kalm to anyone seeking mental health support.
+        - generic [ref=e408]:
+          - img [ref=e409]
+          - img [ref=e411]
+          - img [ref=e413]
+          - img [ref=e415]
+          - img [ref=e417]
+        - generic [ref=e419]:
+          - generic [ref=e420]: Google Reviews
+          - generic [ref=e421]: 4.9 / 5
+    - generic [ref=e428]:
+      - generic [ref=e429]:
+        - heading "Frequently Asked Questions" [level=2] [ref=e430]
+        - paragraph [ref=e431]: Get answers to common questions about our platform and services.
+      - generic [ref=e432]:
+        - generic [ref=e433]:
+          - button "What is Kalm?" [ref=e434] [cursor=pointer]:
+            - heading "What is Kalm?" [level=3] [ref=e435]
+            - img [ref=e437]
+          - paragraph [ref=e439]: Kalm is a calm, online space to speak with licensed Sri Lankan therapists in a way that feels human, more like talking to a friend than attending a formal session. It's professional, but personal.
+        - button "How does Kalm work?" [ref=e441] [cursor=pointer]:
+          - heading "How does Kalm work?" [level=3] [ref=e442]
+          - img [ref=e444]
+        - button "How do I book a therapist?" [ref=e446] [cursor=pointer]:
+          - heading "How do I book a therapist?" [level=3] [ref=e447]
+          - img [ref=e449]
+        - button "Can I talk casually, like with a friend?" [ref=e451] [cursor=pointer]:
+          - heading "Can I talk casually, like with a friend?" [level=3] [ref=e452]
+          - img [ref=e454]
+        - button "How do I pay?" [ref=e456] [cursor=pointer]:
+          - heading "How do I pay?" [level=3] [ref=e457]
+          - img [ref=e459]
+        - button "Is this only for people with \"serious\" issues?" [ref=e461] [cursor=pointer]:
+          - heading "Is this only for people with \"serious\" issues?" [level=3] [ref=e462]
+          - img [ref=e464]
+        - button "Can I stay anonymous?" [ref=e466] [cursor=pointer]:
+          - heading "Can I stay anonymous?" [level=3] [ref=e467]
+          - img [ref=e469]
+        - button "What session types do you offer?" [ref=e471] [cursor=pointer]:
+          - heading "What session types do you offer?" [level=3] [ref=e472]
+          - img [ref=e474]
+    - generic [ref=e475]:
+      - img "kalm-instagram-0" [ref=e476]
+      - generic [ref=e477]:
+        - paragraph [ref=e478]: "@kalm_lk"
+        - paragraph [ref=e479]: Follow Us On Instagram
+        - link "Follow Now" [ref=e480]:
+          - /url: https://www.instagram.com/kalm_lk
+    - contentinfo [ref=e481]:
+      - generic [ref=e483]:
+        - generic [ref=e484]:
+          - generic [ref=e485]:
+            - generic [ref=e486]:
+              - img "Kalm Logo" [ref=e487]
+              - generic [ref=e488]: kalm.lk
+            - paragraph [ref=e489]: For the thoughts you've never told anyone. Professional mental health support, accessible and private.
+            - generic [ref=e490]:
+              - link "Follow us on Instagram" [ref=e491]:
+                - /url: https://www.instagram.com/kalm_lk?igsh=dHJ1YWExNDg1Mmpz
+                - img [ref=e492]
+              - link "Follow us on Facebook" [ref=e495]:
+                - /url: https://www.facebook.com/share/1UrHxB76WN/?mibextid=wwXIfr
+                - img [ref=e496]
+              - link "Subscribe to our YouTube channel" [ref=e498]:
+                - /url: https://youtube.com/@kalm_lkpodcast?si=QvVJa8eYRfSqNr2h
+                - img [ref=e499]
+              - link "Follow us on TikTok" [ref=e502]:
+                - /url: https://vt.tiktok.com/ZSkySoCwe/
+                - img [ref=e503]
+              - link "Email us" [ref=e505]:
+                - /url: mailto:team@kalm.lk
+                - img [ref=e506]
+          - generic [ref=e510]:
+            - heading "Quick Links" [level=4] [ref=e511]
+            - list [ref=e512]:
+              - listitem [ref=e513]:
+                - button "About Us" [ref=e514] [cursor=pointer]
+              - listitem [ref=e515]:
+                - button "Services" [ref=e516] [cursor=pointer]
+              - listitem [ref=e517]:
+                - button "Our Therapists" [ref=e518] [cursor=pointer]
+              - listitem [ref=e519]:
+                - button "FAQ" [ref=e520] [cursor=pointer]
+          - generic [ref=e521]:
+            - heading "Legal" [level=4] [ref=e522]
+            - list [ref=e523]:
+              - listitem [ref=e524]:
+                - button "Privacy Policy" [ref=e525] [cursor=pointer]
+              - listitem [ref=e526]:
+                - button "Terms of Service" [ref=e527] [cursor=pointer]
+              - listitem [ref=e528]:
+                - button "Refund Policy" [ref=e529] [cursor=pointer]
+          - generic [ref=e530]:
+            - heading "Contact" [level=4] [ref=e531]
+            - generic [ref=e532]:
+              - generic [ref=e533]:
+                - img [ref=e534]
+                - link "team@kalm.lk" [ref=e538]:
+                  - /url: mailto:team@kalm.lk
+              - generic [ref=e539]:
+                - img [ref=e540]
+                - link "+94 (76) 633 0360" [ref=e543]:
+                  - /url: tel:+94766330360
+              - generic [ref=e544]:
+                - img [ref=e545]
+                - link "Colombo, Sri Lanka" [ref=e549]:
+                  - /url: https://www.google.com/maps/search/?api=1&query=Colombo%2C+Sri+Lanka
+        - generic [ref=e551]:
+          - paragraph [ref=e552]: © 2024 Kalm.lk. All rights reserved.
+          - paragraph [ref=e553]: Made with ❤️ for mental wellness in Sri Lanka
+          - paragraph [ref=e554]:
+            - text: Developed by
+            - link "Lunor Labs" [ref=e555]:
+              - /url: https://www.lunorlabs.com
+    - button "Contact us on WhatsApp" [ref=e556] [cursor=pointer]:
+      - img [ref=e557]
+      - generic: Chat with us on WhatsApp
+  - iframe [ref=e560]:
+    
+  - iframe [ref=e561]:
+    
+```
