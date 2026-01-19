@@ -1,13 +1,19 @@
-const { test, expect } = require('@playwright/test');
+import { test, expect, Page } from '@playwright/test';
 
 test.describe('Landing Page Color Error Tests', () => {
 
-  test('Test 1: Text Color Validation', async ({ page }) => {
+  test('Test 1: Text Color Validation', async ({ page }: { page: Page }) => {
     await page.goto('https://example.com', { waitUntil: 'networkidle' });
     
-    const textColors = await page.evaluate(() => {
+    interface ColorIssue {
+      element: string;
+      issue: string;
+      color: string;
+    }
+    
+    const textColors: ColorIssue[] = await page.evaluate(() => {
       const elements = document.querySelectorAll('p, h1, h2, h3, span');
-      const colors = [];
+      const colors: ColorIssue[] = [];
       
       elements.forEach(el => {
         const color = window.getComputedStyle(el).color;
@@ -27,19 +33,25 @@ test.describe('Landing Page Color Error Tests', () => {
     expect(textColors.length).toBe(0);
   });
 
-  test('Test 2: Background Color Validation', async ({ page }) => {
+  test('Test 2: Background Color Validation', async ({ page }: { page: Page }) => {
     await page.goto('https://example.com', { waitUntil: 'networkidle' });
     
-    const bgColors = await page.evaluate(() => {
+    interface BgColorIssue {
+      element: string;
+      text: string;
+      issue: string;
+    }
+    
+    const bgColors: BgColorIssue[] = await page.evaluate(() => {
       const elements = document.querySelectorAll('button, a, div');
-      const issues = [];
+      const issues: BgColorIssue[] = [];
       
       elements.forEach(el => {
         const bgColor = window.getComputedStyle(el).backgroundColor;
         if (bgColor === 'rgba(0, 0, 0, 0)' && (el.tagName === 'BUTTON' || el.classList.contains('btn'))) {
           issues.push({
             element: el.tagName,
-            text: el.textContent.trim().substring(0, 20),
+            text: el.textContent?.trim().substring(0, 20) || '',
             issue: 'No background color'
           });
         }
@@ -52,12 +64,12 @@ test.describe('Landing Page Color Error Tests', () => {
     expect(bgColors.length).toBeLessThan(5);
   });
 
-  test('Test 3: Button Color Consistency', async ({ page }) => {
+  test('Test 3: Button Color Consistency', async ({ page }: { page: Page }) => {
     await page.goto('https://example.com', { waitUntil: 'networkidle' });
     
-    const buttonColors = await page.evaluate(() => {
+    const buttonColors: Record<string, number> = await page.evaluate(() => {
       const buttons = document.querySelectorAll('button');
-      const colors = {};
+      const colors: Record<string, number> = {};
       
       buttons.forEach(btn => {
         const bgColor = window.getComputedStyle(btn).backgroundColor;
@@ -71,12 +83,12 @@ test.describe('Landing Page Color Error Tests', () => {
     expect(Object.keys(buttonColors).length).toBeGreaterThan(0);
   });
 
-  test('Test 4: Link Color Check', async ({ page }) => {
+  test('Test 4: Link Color Check', async ({ page }: { page: Page }) => {
     await page.goto('https://example.com', { waitUntil: 'networkidle' });
     
-    const linkColors = await page.evaluate(() => {
+    const linkColors: string[] = await page.evaluate(() => {
       const links = document.querySelectorAll('a');
-      const colors = new Set();
+      const colors = new Set<string>();
       
       links.forEach(link => {
         const color = window.getComputedStyle(link).color;
@@ -90,12 +102,16 @@ test.describe('Landing Page Color Error Tests', () => {
     expect(linkColors.length).toBeGreaterThan(0);
   });
 
-  test('Test 5: Heading Color Validation', async ({ page }) => {
+  test('Test 5: Heading Color Validation', async ({ page }: { page: Page }) => {
     await page.goto('https://example.com', { waitUntil: 'networkidle' });
     
-    const headingColors = await page.evaluate(() => {
+    interface HeadingColors {
+      [key: string]: string;
+    }
+    
+    const headingColors: HeadingColors = await page.evaluate(() => {
       const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
-      const colors = {};
+      const colors: HeadingColors = {};
       
       headings.forEach(tag => {
         const el = document.querySelector(tag);
@@ -112,19 +128,23 @@ test.describe('Landing Page Color Error Tests', () => {
     expect(Object.keys(headingColors).length).toBeGreaterThan(0);
   });
 
-  test('Test 6: Contrast Ratio Check', async ({ page }) => {
+  test('Test 6: Contrast Ratio Check', async ({ page }: { page: Page }) => {
     await page.goto('https://example.com', { waitUntil: 'networkidle' });
     
-    const contrastIssues = await page.evaluate(() => {
-      const issues = [];
+    interface ContrastIssue {
+      element: string;
+      issue: string;
+    }
+    
+    const contrastIssues: ContrastIssue[] = await page.evaluate(() => {
+      const issues: ContrastIssue[] = [];
       const elements = document.querySelectorAll('body *');
       
       elements.forEach(el => {
-        if (el.children.length === 0 && el.textContent.trim().length > 0) {
+        if (el.children.length === 0 && el.textContent && el.textContent.trim().length > 0) {
           const textColor = window.getComputedStyle(el).color;
           const bgColor = window.getComputedStyle(el).backgroundColor;
           
-          // Check for common contrast issues
           if ((textColor === 'rgb(0, 0, 0)' && bgColor === 'rgb(0, 0, 0)') ||
               (textColor === 'rgb(255, 255, 255)' && bgColor === 'rgb(255, 255, 255)')) {
             issues.push({
@@ -142,14 +162,20 @@ test.describe('Landing Page Color Error Tests', () => {
     expect(contrastIssues.length).toBe(0);
   });
 
-  test('Test 7: Color Consistency Across Page', async ({ page }) => {
+  test('Test 7: Color Consistency Across Page', async ({ page }: { page: Page }) => {
     await page.goto('https://example.com', { waitUntil: 'networkidle' });
     
-    const colorPalette = await page.evaluate(() => {
+    interface ColorPalette {
+      totalTextColors: number;
+      totalBgColors: number;
+      totalBorderColors: number;
+    }
+    
+    const colorPalette: ColorPalette = await page.evaluate(() => {
       const colors = {
-        texts: new Set(),
-        backgrounds: new Set(),
-        borders: new Set()
+        texts: new Set<string>(),
+        backgrounds: new Set<string>(),
+        borders: new Set<string>()
       };
       
       const elements = document.querySelectorAll('*');
@@ -171,8 +197,8 @@ test.describe('Landing Page Color Error Tests', () => {
     expect(colorPalette.totalTextColors).toBeGreaterThan(0);
   });
 
-  test('Test 8: Missing Color Definition', async ({ page }) => {
-    const colorErrors = [];
+  test('Test 8: Missing Color Definition', async ({ page }: { page: Page }) => {
+    const colorErrors: string[] = [];
     
     page.on('console', (msg) => {
       if ((msg.type() === 'error' || msg.type() === 'warning') && 
@@ -192,38 +218,41 @@ test.describe('Landing Page Color Error Tests', () => {
     expect(colorErrors.length).toBeLessThan(3);
   });
 
-  test('Test 9: CSS Color Variable Check', async ({ page }) => {
+  test('Test 9: CSS Color Variable Check', async ({ page }: { page: Page }) => {
     await page.goto('https://example.com', { waitUntil: 'networkidle' });
     
-    const cssVariables = await page.evaluate(() => {
+    const cssVariables: number = await page.evaluate(() => {
       const root = document.documentElement;
       const styles = window.getComputedStyle(root);
       
-      // Check for CSS color variables
-      const properties = [];
+      let count = 0;
       for (let i = 0; i < styles.length; i++) {
         const prop = styles[i];
         if (prop.includes('color') || prop.includes('--')) {
-          properties.push(prop);
+          count++;
         }
       }
       
-      return properties.length;
+      return count;
     });
     
     console.log('✓ CSS Variables Found:', cssVariables);
     expect(cssVariables).toBeGreaterThanOrEqual(0);
   });
 
-  test('Test 10: Hover State Color Change', async ({ page }) => {
+  test('Test 10: Hover State Color Change', async ({ page }: { page: Page }) => {
     await page.goto('https://example.com', { waitUntil: 'networkidle' });
     
-    const hoverColors = await page.evaluate(() => {
+    interface HoverStyle {
+      hasHoverStyle: boolean;
+      bgColor: string;
+    }
+    
+    const hoverColors: HoverStyle[] = await page.evaluate(() => {
       const buttons = document.querySelectorAll('button');
-      const hoverStyles = [];
+      const hoverStyles: HoverStyle[] = [];
       
       buttons.forEach(btn => {
-        // Check if button has hover styles defined
         const style = window.getComputedStyle(btn, ':hover');
         hoverStyles.push({
           hasHoverStyle: style.length > 0,

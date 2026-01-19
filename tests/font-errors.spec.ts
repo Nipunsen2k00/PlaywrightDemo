@@ -1,13 +1,16 @@
-const { test, expect } = require('@playwright/test');
+import { test, expect, Page } from '@playwright/test';
 
 test.describe('Landing Page Font Error Tests', () => {
 
-  test('Test 1: Font Loading Validation', async ({ page }) => {
-    // Navigate to a sample page
+  test('Test 1: Font Loading Validation', async ({ page }: { page: Page }) => {
     await page.goto('https://example.com', { waitUntil: 'networkidle' });
     
-    // Check if fonts are loaded
-    const fontInfo = await page.evaluate(() => {
+    interface FontInfo {
+      fontCount: number;
+      ready: string;
+    }
+    
+    const fontInfo: FontInfo = await page.evaluate(() => {
       const fonts = document.fonts;
       return {
         fontCount: fonts.size,
@@ -19,10 +22,10 @@ test.describe('Landing Page Font Error Tests', () => {
     expect(fontInfo.ready).toBe('Loaded');
   });
 
-  test('Test 2: Font Family Check', async ({ page }) => {
+  test('Test 2: Font Family Check', async ({ page }: { page: Page }) => {
     await page.goto('https://example.com', { waitUntil: 'networkidle' });
     
-    const bodyFontFamily = await page.evaluate(() => {
+    const bodyFontFamily: string = await page.evaluate(() => {
       return window.getComputedStyle(document.body).fontFamily;
     });
     
@@ -31,10 +34,10 @@ test.describe('Landing Page Font Error Tests', () => {
     expect(bodyFontFamily.length).toBeGreaterThan(0);
   });
 
-  test('Test 3: Font Size Validation', async ({ page }) => {
+  test('Test 3: Font Size Validation', async ({ page }: { page: Page }) => {
     await page.goto('https://example.com', { waitUntil: 'networkidle' });
     
-    const headingFontSize = await page.evaluate(() => {
+    const headingFontSize: string = await page.evaluate(() => {
       const heading = document.querySelector('h1');
       if (heading) {
         return window.getComputedStyle(heading).fontSize;
@@ -46,10 +49,10 @@ test.describe('Landing Page Font Error Tests', () => {
     expect(headingFontSize).not.toBe('0px');
   });
 
-  test('Test 4: Text Color Validation', async ({ page }) => {
+  test('Test 4: Text Color Validation', async ({ page }: { page: Page }) => {
     await page.goto('https://example.com', { waitUntil: 'networkidle' });
     
-    const textColor = await page.evaluate(() => {
+    const textColor: string = await page.evaluate(() => {
       return window.getComputedStyle(document.body).color;
     });
     
@@ -58,10 +61,10 @@ test.describe('Landing Page Font Error Tests', () => {
     expect(textColor).not.toBe('transparent');
   });
 
-  test('Test 5: Line Height Check', async ({ page }) => {
+  test('Test 5: Line Height Check', async ({ page }: { page: Page }) => {
     await page.goto('https://example.com', { waitUntil: 'networkidle' });
     
-    const lineHeight = await page.evaluate(() => {
+    const lineHeight: string = await page.evaluate(() => {
       const para = document.querySelector('p');
       if (para) {
         return window.getComputedStyle(para).lineHeight;
@@ -73,10 +76,15 @@ test.describe('Landing Page Font Error Tests', () => {
     expect(lineHeight).not.toBe('0px');
   });
 
-  test('Test 6: Font Weight Consistency', async ({ page }) => {
+  test('Test 6: Font Weight Consistency', async ({ page }: { page: Page }) => {
     await page.goto('https://example.com', { waitUntil: 'networkidle' });
     
-    const fontWeights = await page.evaluate(() => {
+    interface FontWeights {
+      heading: string;
+      paragraph: string;
+    }
+    
+    const fontWeights: FontWeights = await page.evaluate(() => {
       const h1 = document.querySelector('h1');
       const p = document.querySelector('p');
       
@@ -90,10 +98,9 @@ test.describe('Landing Page Font Error Tests', () => {
     expect(fontWeights.heading).toBeTruthy();
   });
 
-  test('Test 7: Missing Font Detection', async ({ page }) => {
-    const fontErrors = [];
+  test('Test 7: Missing Font Detection', async ({ page }: { page: Page }) => {
+    const fontErrors: string[] = [];
     
-    // Listen for console errors related to fonts
     page.on('console', (msg) => {
       if (msg.type() === 'error' && msg.text().includes('font')) {
         fontErrors.push(msg.text());
@@ -111,10 +118,15 @@ test.describe('Landing Page Font Error Tests', () => {
     expect(fontErrors.length).toBe(0);
   });
 
-  test('Test 8: Font Rendering Quality', async ({ page }) => {
+  test('Test 8: Font Rendering Quality', async ({ page }: { page: Page }) => {
     await page.goto('https://example.com', { waitUntil: 'networkidle' });
     
-    const fontRendering = await page.evaluate(() => {
+    interface FontRendering {
+      smoothing: string;
+      antialias: string;
+    }
+    
+    const fontRendering: FontRendering = await page.evaluate(() => {
       return {
         smoothing: document.body.style.webkitFontSmoothing || 'default',
         antialias: document.body.style.textRendering || 'default'
